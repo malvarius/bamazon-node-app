@@ -41,7 +41,7 @@ function updateProductQty(input, qty) {
 }
 // function to check if we have enough of that product, if we do uses CB to update product qty
 function checkProductQty(item_id, userQty) {
-    connection.query(`SELECT item_id, product_name, stock FROM customer_products WHERE item_id = ${item_id} `, function (err, res) {
+    connection.query(`SELECT item_id, price, product_name, stock FROM customer_products WHERE item_id = ${item_id} `, function (err, res) {
         if (err) throw err;
         // console.log(res[0])
         if (res[0].stock < userQty) {
@@ -49,14 +49,21 @@ function checkProductQty(item_id, userQty) {
             inquirerFunction();
         } else {
             var remainingQty = res[0].stock - userQty
+            var cost = res[0].price*userQty
+            console.log('=========================================')
+            console.log('=========================================')
+            console.log(`You purchased ${userQty} of the following item: ${res[0].product_name}`)
+            console.log(`Your total purchase cost was: $${cost}`)
+            console.log('=========================================')
+            console.log('=========================================')
             // console.log(remainingQty)
             updateProductQty(item_id, remainingQty)
-            queryTable();
+            // queryTable();
             setTimeout(inquirerFunction,50);
         }
     });
 }
-// cost calculator function
+
 // inquirer function to handle user responses
 function inquirerFunction(){
 inquirer
