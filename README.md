@@ -18,8 +18,8 @@ Bamazon can be used to see what items are available for "purchase" and also to p
 
  node bamazon  
 connection as ID 147  
-? Would you like to purchase a product or end transaction? Purchase  
- Which product would you like to purchase? Please enter the ID of the product you want  
+Would you like to purchase a product or end transaction? Purchase  
+*Which product would you like to purchase? Please enter the ID of the product you want   
 =======================  
 ID: 1 | Product: soccer ball | Department: sports | Price: 15 | Qty Available: 100  
 ID: 2 | Product: baseball glove | Department: sports | Price: 40 | Qty Available: 50  
@@ -41,7 +41,7 @@ ID: 12 | Product: Laptop | Department: electronics | Price: 500 | Qty Available:
 You purchased 12 of the following item: soccer ball  
 Your total purchase cost was: $180  
 =========================================  
-=========================================  
+=========================================*  
 **An example transaction with bamazonmanager would look like this:**  
 $ node bamazonmanager  
 ? Please select one of the following View Low Inventory  
