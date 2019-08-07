@@ -25,14 +25,6 @@ function queryTable() {
         console.log('=======================')
     });
 }
-// adds row to table
-// function addTable (){
-//     var post  = { title: 'Truth Hurts',artist:'Lizzo',genre:'Rap'};
-// var query = connection.query('INSERT INTO music_table SET ?', post, function (error, results, fields) {
-//   if (error) throw error;
-//   console.log('Adding data to music_table')
-// });
-// }
 
 // function to update product based on customer input
 function updateProductQty(input, qty) {
