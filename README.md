@@ -16,10 +16,10 @@ Bamazon can be used to see what items are available for "purchase" and also to p
 
 **An example transaction with bamazon would look like this:**  
 
-$ node bamazon  
+ node bamazon  
 connection as ID 147  
 ? Would you like to purchase a product or end transaction? Purchase  
-? Which product would you like to purchase? Please enter the ID of the product you want.  
+ Which product would you like to purchase? Please enter the ID of the product you want  
 =======================  
 ID: 1 | Product: soccer ball | Department: sports | Price: 15 | Qty Available: 100  
 ID: 2 | Product: baseball glove | Department: sports | Price: 40 | Qty Available: 50  
