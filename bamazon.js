@@ -16,10 +16,13 @@ var connection = mysql.createConnection({
 function queryTable() {
     connection.query("SELECT * FROM customer_products", function (err, res) {
         if (err) throw err;
+        console.log('\r')
+        console.log('=======================')
         // console.log('Reading data from customer_products')
         for (i = 0; i < res.length; i++) {
             console.log(`ID: ${res[i].item_id} | Product: ${res[i].product_name} | Department: ${res[i].department_name} | Price: ${res[i].price} | Qty Available: ${res[i].stock}`)
         }
+        console.log('=======================')
     });
 }
 // adds row to table
@@ -33,15 +36,15 @@ function queryTable() {
 
 // function to update product based on customer input
 function updateProductQty(input, qty) {
-    var sql = `UPDATE customer_products SET stock = ${qty} WHERE item_id = ${input}`;
-    connection.query(sql, function (err, result) {
+    var sql = `UPDATE customer_products SET stock = ? WHERE item_id = ?`;
+    connection.query(sql,[qty,input], function (err, result) {
         if (err) throw err;
         console.log(result.affectedRows + " record(s) updated");
     })
 }
 // function to check if we have enough of that product, if we do uses CB to update product qty
 function checkProductQty(item_id, userQty) {
-    connection.query(`SELECT item_id, price, product_name, stock FROM customer_products WHERE item_id = ${item_id} `, function (err, res) {
+    connection.query(`SELECT item_id, price, product_name, stock FROM customer_products WHERE item_id = ? `,[item_id], function (err, res) {
         if (err) throw err;
         // console.log(res[0])
         if (res[0].stock < userQty) {
@@ -59,7 +62,7 @@ function checkProductQty(item_id, userQty) {
             // console.log(remainingQty)
             updateProductQty(item_id, remainingQty)
             // queryTable();
-            setTimeout(inquirerFunction,50);
+            inquirerFunction();
         }
     });
 }
