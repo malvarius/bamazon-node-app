@@ -19,8 +19,8 @@ Bamazon can be used to see what items are available for "purchase" and also to p
  node bamazon  
 connection as ID 147  
 Would you like to purchase a product or end transaction? Purchase  
-*Which product would you like to purchase? Please enter the ID of the product you want   
-=======================  
+Which product would you like to purchase? Please enter the ID of the product you want 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
 ID: 1 | Product: soccer ball | Department: sports | Price: 15 | Qty Available: 100  
 ID: 2 | Product: baseball glove | Department: sports | Price: 40 | Qty Available: 50  
 ID: 3 | Product: iPhone | Department: electronics | Price: 300 | Qty Available: 4  
@@ -33,22 +33,20 @@ ID: 9 | Product: Harry Potter | Department: movies | Price: 20 | Qty Available: 
 ID: 10 | Product: Jurassic Park | Department: movies | Price: 20 | Qty Available: 150  
 ID: 11 | Product: BackPack | Department: Supplies | Price: 25 | Qty Available: 100  
 ID: 12 | Product: Laptop | Department: electronics | Price: 500 | Qty Available: 15  
-=======================  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
 ? Which product would you like to purchase? Please enter the ID of the product you want. 1  
 ? How much of that product would you like to purchase? 12  
-=========================================  
-=========================================  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
 You purchased 12 of the following item: soccer ball  
 Your total purchase cost was: $180  
-=========================================  
-=========================================*  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 **An example transaction with bamazonmanager would look like this:**  
 $ node bamazonmanager  
 ? Please select one of the following View Low Inventory  
-==========================================================================  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
 ID: 3 | Product: iPhone | Department: electronics | Price: 300 | Qty Available: 4  
 ID: 5 | Product: LG TV | Department: electronics | Price: 750 | Qty Available: 3  
-==========================================================================  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
 ? Please select one of the following (Use arrow keys)  
 > View Products for Sale  
   View Low Inventory  
