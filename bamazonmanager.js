@@ -54,6 +54,7 @@ function addToInventory(item_id, amount) {
         });
     });
 }
+// function to create a new item 
 function addNewItem(name,department,price,stock){
     connection.query("insert into customer_products (product_name,department_name,price,stock) values (?,?,?,?)",[name,department,Number(price),Number(stock)],function(err,res){
         if(err) throw err
@@ -132,7 +133,7 @@ function inquirerFunction() {
                     }
                 ])
                 .then(answers=>{
-                    // add enw product function here
+                    // add new product function here
                     addNewItem(answers.newProduct, answers.deptName,answers.price,answers.stock);
                     setTimeout(inquirerFunction,50);
                 })
