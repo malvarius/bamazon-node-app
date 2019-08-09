@@ -11,7 +11,9 @@ The nature of this app is to allow you to perform diffferent functions to a ware
 
 There are two JS files that can be ran with node, one is bamazon.js and the other is bamazonmanager.js.   
 
-Bamazon can be used to see what items are available for "purchase" and also to purchase an item by ID if the quantity is available.
+Bamazon can be used to see what items are available for "purchase" and also to purchase an item by ID if the quantity is available.  
+
+Bamazonmanager can be used to see items for sale, low inventory, add inventory, and add new items.
 
 **Make sure to run the following in the command line to install necessary node packages before execution: npm install**
 
