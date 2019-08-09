@@ -1,6 +1,7 @@
 # bamazon-node-app
 
 **INSTRUCTIONAL VIDEO ON HOW TO USE:**   
+https://drive.google.com/open?id=1HMjakEiKpD-3_IxM9liDmY5zSYB0xJ9B
 
 
 You can find this app on my portfolio as well:  
